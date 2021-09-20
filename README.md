@@ -3,19 +3,17 @@
 环境：
 
         qt6.1.2
-
         vs2019(带有qt插件)
-
 
 程序共四个部分（需要打开qt_gui的sln）
 
-Ui界面程序(qt_gui)：让用户选择被调用程序并调用注射器程序，之后ui界面会显示被注射程序的相关信息以及操作信息。
+        Ui界面程序(qt_gui)：让用户选择被调用程序并调用注射器程序，之后ui界面会显示被注射程序的相关信息以及操作信息。
 
-注射器程序(injector)：对被注射的可执行程序注入dll文件并调用它。
+        注射器程序(injector)：对被注射的可执行程序注入dll文件并调用它。
 
-被注入的Dll文件(injected_dll)：包含了hook操作，对一些api进行了hook，会返回信息给ui界面。
+        被注入的Dll文件(injected_dll)：包含了hook操作，对一些api进行了hook，会返回信息给ui界面。
 
-被注射的可执行程序(test_program)：被感染的目标。
+        被注射的可执行程序(test_program)：被感染的目标。
 
 被hook函数的api如下：
         DetourAttach(&(PVOID&)OldMessageBoxW, NewMessageBoxW);
