@@ -11,20 +11,37 @@ Ui界面程序(qt_gui)：让用户选择被调用程序并调用注射器程序�
 被注射的可执行程序(test_program)：被感染的目标。
 被hook函数的api如下：
         DetourAttach(&(PVOID&)OldMessageBoxW, NewMessageBoxW);
+        
         DetourAttach(&(PVOID&)OldMessageBoxA, NewMessageBoxA);
+        
         DetourAttach(&(PVOID&)OldHeapCreate, NewHeapCreate);
+        
         DetourAttach(&(PVOID&)OldHeapFree, NewHeapFree);
+        
         DetourAttach(&(PVOID&)OldHeapDestroy, NewHeapDestroy);
+        
         DetourAttach(&(PVOID&)OldCreateFile, NewCreateFile);
+        
         DetourAttach(&(PVOID&)OldWriteFile, NewWriteFile);
+        
         DetourAttach(&(PVOID&)OldReadFile, NewReadFile);
+        
         DetourAttach(&(PVOID&)OldRegCreateKeyEx, NewRegCreateKeyEx);
+        
         DetourAttach(&(PVOID&)OldRegSetValueEx, NewRegSetValueEx);
+        
         DetourAttach(&(PVOID&)OldRegDeleteValue, NewRegDeleteValue);
+        
         DetourAttach(&(PVOID&)OldRegCloseKey, NewRegCloseKey);
+        
         DetourAttach(&(PVOID&)OldRegOpenKeyEx, NewRegOpenKeyEx);
+        
         DetourAttach(&(PVOID&)Oldsocket, Newsocket);
+        
         DetourAttach(&(PVOID&)Oldbind, Newbind);
+        
         DetourAttach(&(PVOID&)Oldsend, Newsend);
+        
         DetourAttach(&(PVOID&)Oldconnect, Newconnect);
+        
         DetourAttach(&(PVOID&)Oldrecv, Newrecv);
